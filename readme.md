@@ -16,7 +16,7 @@ Random Color Generator is a Node.js package that allows you to generate random h
 You can install the Random Color Generator package using npm:
 
 ```bash
-npm install -g random-color-generator
+npm install -g randomcolor95
 ```
 ## Usage
 
