@@ -2,18 +2,22 @@
 
 import { generateRandomHexColor, displayColoredText } from "../index.mjs";
 import { program } from "commander";
-import cliMd from 'cli-markdown';
+import cliMd from "cli-markdown";
 
 program
   .name("randomcolor")
+  .version("0.0.1")
   .usage("[options]")
-  .option("-r, --randomcolor", "Generate a random color");
+  .option("-r, --randomcolor", "Generate a random color")
+  .option("-v, --version", "Display the package version");
 
 program.parse(process.argv);
 
-const { randomcolor } = program.opts();
+const { randomcolor, version } = program.opts();
 
-if (randomcolor) {
+if (version) {
+  console.log(`Random Color Generator version ${program.version()}`);
+} else if (randomcolor) {
   const randomColor = generateRandomHexColor();
   const { coloredText, hexColor } = displayColoredText(
     "This is a colored text!",
