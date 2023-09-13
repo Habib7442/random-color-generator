@@ -6,7 +6,7 @@ import cliMd from "cli-markdown";
 
 program
   .name("randomcolor")
-  .version("0.0.1")
+  .version("0.0.2")
   .usage("[options]")
   .option("-r, --randomcolor", "Generate a random color")
   .option("-v, --version", "Display the package version");
